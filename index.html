@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+<title>Tour the Cities and Towns in the Boston Region MPO</title>
+<style type="text/css">
+* {
+	font-family:"Trebuchet MS","sans-serif";
+}
+#header {
+	/* text-align: center; */
+	margin-left: 280px;
+	color: mediumblue;
+}
+#container {
+	width: 1620px;
+	height: 605px;
+	margin-left: 100px;
+}
+#map{
+	width: 1000px;
+	height:600px;
+	border: 1px solid #aeaeae;
+	float: left;
+}
+#blurb {
+	width: 600px;
+	height: 600px;
+	margin-left: 10px;
+	float: right;
+}
+#button_div {
+	margin-left: 100px;
+	float: left;
+}
+#town_name {
+	align: center;
+	font-weight: bold;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/3.8.2/ol.js"></script>
+<script src="ctpsutils.js"></script>
+<script src="tourDemo.js"></script>
+</head>
+<body>
+<h2 id="header">Tour the Cities and Towns in the Boston Region MPO</h2>
+<div id="container">
+	<div id="map">
+	</div>
+	<div id="blurb">
+		<table>
+			<caption id="town_name"></caption>
+			<tbody>
+				<tr>
+					<td>MAPC Community Type:</td><td id="comm_type"></td>
+				</tr>
+				<tr>
+					<td>MAPC Subregion:</td><td id="mapc_sub"></td>
+				</tr>
+				<tr>
+					<td>Regional Transit Authority:</td><td id="rta"></td>
+				</tr>
+				<tr>
+					<td>Electric Utility:</td><td id="elec"></td>
+				</tr>
+				<tr>
+					<td>Gas Utility:</td><td id="gas"></td>
+				</tr>
+				<tr>
+					<td>Cable Provider:</td><td id="cable"></td>
+				</tr>
+				<tr>
+					<td>Population density:</td><td id="pop_den"></td>
+				</tr>
+				<tr>
+					<td>Employment density:</td><td id="emp_den"></td>
+				</tr>
+				<tr>
+					<td>Elderly population:</td><td id="elderly_pct"></td>
+				</tr>
+				<tr>
+					<td>Sidewalk coverage:</td><td id="sidewalk_cov"></td>
+				</tr>
+					<td>Miles of sidewalk:</td><td id="sidewalk_mi"></td>
+				</tr>
+				<tr>
+					<td>Pedestrian crash rate:</td><td id="ped_crash_rate"></td>
+				</tr>				
+				<tr>
+					<td>Miles of bicycle trails:</td><td id="bike_trail_mi"></td>
+				</tr>
+				<tr>
+					<td>Miles of bicycle lanes:</td><td id="bike_lane_mi"></td>
+				</tr>
+				<tr>
+					<td>Bicycle crash rate</td><td id="bike_crash_rate"></td>
+				</tr>				
+					<td>Autos per household:</td><td id="autos_per_hh"></td>
+				</tr>				
+				<tr>				
+					<td>Daily VMT per household:</td><td id="vmt_per_hh"></td>
+				</tr>
+				<tr>
+					<td>Transportation Mode-split</td><td></td>
+				</tr>
+				<tr>
+					<td>Drive alone:</td><td id="drove_alone_share_pct"></td>
+				</tr>
+				<tr>
+					<td>Carpool:</td><td id="carpool_share_pct"></td>
+				</tr>
+				<tr>
+					<td>Transit:</td><td id="transit_share_pct"></td>
+				</tr>				
+				<tr>			
+					<td>Bicycle:</td><td id="bike_share_pct"></td>
+				</tr>	
+				<tr>
+					<td>Walk:</td><td id="walk_share_pct"></td>
+				</tr>	
+				<tr>
+					<td>Work at home:</td><td id="wah_share_pct"></td>
+				</tr>				
+				<tr>
+					<td>Other:</td><td id="other_share_pct"></td>
+				</tr>				
+			</tbody>
+		</table>
+	</div>	
+</div>
+<br/>
+<div id="button_div">
+	<input id="about_button" type="button" value="About this demo" alt="Information about  this demo"></input>
+</div>
+<br/>
+<div id="debug_div"></div>
+<script>
+$(document).ready(function() {
+    CTPS.tourDemo.init();	
+});
+</script>
+</body>
+</html>
