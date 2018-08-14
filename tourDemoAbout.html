@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About This Demo</title>
+
+<style type="text/css">
+
+
+#bigbox {
+    border: 3px ridge #b22400; 
+    padding: 25px;
+    margins: 1px;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #1d52c2;
+	width: 600px;
+	margin: 0 40px 0 0;	
+}
+h3 {
+    color: #b22400;
+    border-bottom: 1px solid #1d52c2;
+	overflow: hidden;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	color: #000000;
+}
+a {
+    text-decoration: none;
+}
+a.button {    
+    border: solid 1px #1d52c2;
+    background-color: #1d52c2;
+    padding: 2px 2px 2px 2px;
+    color: #fff;
+    
+}
+a.button:hover {
+    background-color: #fff;
+    color: #1d52c2;
+}
+
+</style>
+
+<script>
+function targetopener(mylink, closeme, closeonly) {
+	if (! (window.focus && window.opener))return true;
+	window.opener.focus();
+	if (! closeonly)window.opener.location.href=mylink.href;
+	if (closeme)window.close();
+	return false;
+}
+</script>
+</head>
+
+<body>
+
+<div id="bigbox">
+<div id="closeLink2">
+	<a href="http://www.ctps.org/map/www/demos/tourDemo/index.html" class="button"
+	onclick="return targetopener(this,true,true)">Close this window</a>   
+</div>			<!--   END OF CLOSELINK  -->
+
+
+<h3>Introduction </h3>
+<p>
+This application offers a virtual tour of the 101 cities and towns in the Boston Region MPO.
+It is primarily intended as a demonstration of some of the experimental animation features
+of version 3 of the OpenLayers web client mapping library. The data displayed for individual
+towns is largely identical that displayed in CTPS's Livable Communities Data Browser; a few
+additional fields were added more-or-less at the whim of the developer.
+</p>
+<h3>Software Used</h3>
+The software used to build this demo includes:
+<ul>
+<li>PostgreSQL - database</li>
+<li>PostGIS - a spatial extension to the PostgreSQL database</li>
+<li>Geoserver - to publish spatial data (in this case, city and town boundaries) and tabular data on the web</li>
+<li>OpenLayers (version 3) - for mapping functionality in the web client</li>
+<li>jQuery - to help manage the DOM</li>
+</ul>
+<h3>Data Sources</h3>
+<p>
+The base map displayed by this demo is Open Street Map.
+</p>
+<p>
+The tabular data displayed by this demo come from:
+<ul>
+<li>United States Bureau of the Census </li>
+<li>Massachusetts Office of Geographic Information (MassGIS) </li>
+<li>Massachusetts Department of Transportation (MassDOT) </li>
+<li>Boston Region Metropolitan Planning Organization </li>	  
+<li>Metropolitan Area Planning Council (MAPC) </li>
+</ul>
+</p>
+<p>
+If you like this demo, please consider giving the developer an oatmeal rasin cookie.
+</p>
+<div id="closeLink">
+	<a href="http://www.ctps.org/map/www/demos/tourDemo/index.html" class="button"
+	onclick="return targetopener(this,true,true)" >Close this window</a>   
+</div>			<!--   END OF CLOSELINK  -->
+
+</div>          <!--   END OF BIGBOX    -->
+
+
+
+</body>
+</html>
