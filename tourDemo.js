@@ -1,7 +1,7 @@
 var CTPS = {};
 CTPS.tourDemo = {};
 
-CTPS.tourDemo.szServerRoot = 'http://www.ctps.org:8080/geoserver/'
+CTPS.tourDemo.szServerRoot = 'http://appsrvr3.ad.ctps.org:8080/geoserver/'
 CTPS.tourDemo.szWMSserverRoot = CTPS.tourDemo.szServerRoot + '/wms'; 
 CTPS.tourDemo.szWFSserverRoot = CTPS.tourDemo.szServerRoot + '/wfs';
 
