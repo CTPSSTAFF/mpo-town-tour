@@ -54,7 +54,7 @@ CTPS.tourDemo.init = function() {
 	});
 		
 	var szServer = CTPS.tourDemo.szWFSserverRoot;
-	var szTypename = 'postgis:ctps_towns_mapc_outline';
+	var szTypename = 'ctps_pg:ctps_towns_mpo_97_outline_poly';
 	var szUrl = szServer + '?';
 	szUrl += '&service=wfs';
 	szUrl += '&version=1.0.0';
@@ -136,7 +136,7 @@ CTPS.tourDemo.timerFunc = function() {
 	var tid = CTPS.tourDemo.getNextTid();
 	var szFilter = "town_id=" + tid;
 	var szServer = CTPS.tourDemo.szWFSserverRoot;
-	var szTypename = 'postgis:ctps_towns_mapc_tour';  
+	var szTypename = 'ctps_pg:ctps_towns_mapc_tour';  
 	var szUrl = szServer + '?';
 	szUrl += '&service=wfs';
 	szUrl += '&version=1.0.0';
