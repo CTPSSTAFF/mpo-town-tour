@@ -54,7 +54,7 @@ CTPS.tourDemo.init = function() {
 	});
 		
 	var szServer = CTPS.tourDemo.szWFSserverRoot;
-	var szTypename = 'ctps_pg:ctps_towns_mpo_97_outline_poly';
+	var szTypename = 'ctps_pg:ctps_towns_mpo97_outline_poly';
 	var szUrl = szServer + '?';
 	szUrl += '&service=wfs';
 	szUrl += '&version=1.0.0';
@@ -104,31 +104,31 @@ CTPS.tourDemo.boundsToCenter = function(oExtent) {
 CTPS.tourDemo.timerFunc = function() {
 	function showTownInfo(props) {
 		var aCommTypes = ['', 'Inner Core', 'Regional Urban Center', 'Maturing Suburb', 'Developing Suburb'];
-		$('#town_name').html(props.TOWN);
-		$('#comm_type').html(aCommTypes[props.COMMUNITY_TYPE]);
-		$('#mapc_sub').html(props.MAPC_SUB);
-		$('#rta').html(props.RTA);
-		$('#elec').html(props.ELEC);
-		$('#gas').html(props.GAS);
-		$('#cable').html(props.CABLE);
-		$('#pop_den').html(props.POP_DENSITY.toFixed(2) + ' people per square mile');
-		$('#emp_den').html(props.EMP_DENSITY.toFixed(2) + ' jobs per square mile');
-		$('#elderly_pct').html(props.ELDERLY_POP_PCT.toFixed(2) + '%');
-		$('#sidewalk_cov').html(props.SIDEWALK_COV_PCT.toFixed(2) + '%');
-		$('#sidewalk_mi').html(props.SIDEWALK_MI.toFixed(2));
-		$('#ped_crash_rate').html(props.PED_CRASH_RATE.toFixed(2) + ' crashes per 1,000 residents');
-		$('#bike_trail_mi').html(props.BIKE_TRAIL_MI.toFixed(2));
-		$('#bike_lane_mi').html(props.BIKE_LANE_MI.toFixed(2));
-		$('#bike_crash_rate').html(props.BIKE_CRASH_RATE.toFixed(2) + ' crashes per 1,000 residents');
-		$('#autos_per_hh').html(props.AUTOS_PER_HH.toFixed(2));
-		$('#vmt_per_hh').html(props.VMT_PER_HH.toFixed(2));
-		$('#drove_alone_share_pct').html(props.DROVE_ALONE_SHARE_PCT.toFixed(2) + '%');			
-		$('#carpool_share_pct').html(props.CARPOOL_SHARE_PCT.toFixed(2) + '%');			
-		$('#transit_share_pct').html(props.TRANSIT_SHARE_PCT.toFixed(2) + '%');		
-		$('#bike_share_pct').html(props.BIKE_SHARE_PCT.toFixed(2) + '%');
-		$('#walk_share_pct').html(props.WALK_SHARE_PCT.toFixed(2) + '%');
-		$('#wah_share_pct').html(props.WAH_SHARE_PCT.toFixed(2) + '%');
-		$('#other_share_pct').html(props.OTHER_SHARE_PCT.toFixed(2) + '%');
+		$('#town_name').html(props.town);
+		$('#comm_type').html(aCommTypes[props.community_type]);
+		$('#mapc_sub').html(props.mapc_sub);
+		$('#rta').html(props.rta);
+		$('#elec').html(props.elec);
+		$('#gas').html(props.gas);
+		$('#cable').html(props.cable);
+		$('#pop_den').html(props.pop_density.toFixed(2) + ' people per square mile');
+		$('#emp_den').html(props.emp_density.toFixed(2) + ' jobs per square mile');
+		$('#elderly_pct').html(props.elderly_pop_pct.toFixed(2) + '%');
+		$('#sidewalk_cov').html(props.sidewalk_cov_pct.toFixed(2) + '%');
+		$('#sidewalk_mi').html(props.sidewalk_mi.toFixed(2));
+		$('#ped_crash_rate').html(props.ped_crash_rate.toFixed(2) + ' crashes per 1,000 residents');
+		$('#bike_trail_mi').html(props.bike_trail_mi.toFixed(2));
+		$('#bike_lane_mi').html(props.bike_lane_mi.toFixed(2));
+		$('#bike_crash_rate').html(props.bike_crash_rate.toFixed(2) + ' crashes per 1,000 residents');
+		$('#autos_per_hh').html(props.autos_per_hh.toFixed(2));
+		$('#vmt_per_hh').html(props.vmt_per_hh.toFixed(2));
+		$('#drove_alone_share_pct').html(props.drove_alone_share_pct.toFixed(2) + '%');			
+		$('#carpool_share_pct').html(props.carpool_share_pct.toFixed(2) + '%');			
+		$('#transit_share_pct').html(props.transit_share_pct.toFixed(2) + '%');		
+		$('#bike_share_pct').html(props.bike_share_pct.toFixed(2) + '%');
+		$('#walk_share_pct').html(props.walk_share_pct.toFixed(2) + '%');
+		$('#wah_share_pct').html(props.wah_share_pct.toFixed(2) + '%');
+		$('#other_share_pct').html(props.other_share_pct.toFixed(2) + '%');
 	}
 	// Main function begins here.
 	// Clear any feature(s) that might be in the vector layer.
